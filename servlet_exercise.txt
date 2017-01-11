@@ -1,0 +1,21 @@
+create user login/logout flows using servlet + jsp + html. 
+
+-User Object : (id, email , password , createdDate, urlPhoto) 
+-Create mockup list of users info 10 records
+
+-Store user info in session Object. 
+-create login page and servlet to authentication
+-If login success --> redirect to myProfile.jsp page ( content is display user info and with logout link). click logout - remove this user from session.
+
+-myProfile.jsp : there is a link which user can upload image.
+
+-create generic error page to handle all errors.
+
+-create filter to trace out log console (system.out.print) with info : remote-ip , Date and timespent per request for all request. ex:
+
+Access from ip : xxx.xxx.xxx - Date - timespent [xx] millis
+
+
+
+
+

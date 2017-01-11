@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+     
+     
+     <!-- This is a context init parameter getServletContext().getInitParameter-->
+    <context-param>
+        <param-name>email</param-name>
+        <param-value>admin@example.com</param-value>
+    </context-param>
+       
+    <context-param> 
+    <description>Location to store uploaded file</description> 
+    <param-name>file-upload</param-name> 
+    <param-value>/uploads/</param-value> 
+    </context-param>
+   
+    
+    <servlet>
+    	<servlet-name>SubmitLogin</servlet-name>
+    	<servlet-class>com.rupp.sample.web.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+    	<servlet-name>SubmitLogin</servlet-name>
+    	<url-pattern>/submitLogin</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+    	<servlet-name>Logout</servlet-name>
+    	<servlet-class>com.rupp.sample.web.LogoutServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+    	<servlet-name>Logout</servlet-name>
+    	<url-pattern>/logout</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+    	<servlet-name>profileUser</servlet-name>    	
+    	<jsp-file>/profileUser.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+    	<servlet-name>profileUser</servlet-name>
+    	<url-pattern>/profileInfo</url-pattern>
+    </servlet-mapping>
+    <servlet>
+    	<servlet-name>UploadPhoto</servlet-name>
+    	<servlet-class>com.rupp.sample.web.UploadPhoto</servlet-class>
+    </servlet>
+    <servlet-mapping>
+    	<servlet-name>UploadPhoto</servlet-name>
+    	<url-pattern>/uploadPhoto</url-pattern>
+    </servlet-mapping>
+    
+    <session-config>
+    <!-- 15mintue  default value is 30min -->
+    <session-timeout>15</session-timeout>
+  </session-config>
+  
+    <!-- welcome file -->
+   <welcome-file-list>  
+   <welcome-file>formLogin.jsp</welcome-file>  
+   <welcome-file>index.html</welcome-file>  
+  </welcome-file-list>  
+</web-app>
