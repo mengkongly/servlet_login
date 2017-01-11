@@ -51,8 +51,10 @@ public class LoginServlet extends HttpServlet{
     			session.setAttribute("email", user.getEmail());
     			session.setAttribute("createDate", user.getCreateDate());
     			
-    			urlPhoto	=	request.getContextPath()+File.separator+"uploads"+File.separator+user.getUrlPhoto();
-    			session.setAttribute("urlPhoto", urlPhoto);
+    			if(!user.getUrlPhoto().equals("")){
+	    			urlPhoto	=	request.getContextPath()+File.separator+"uploads"+File.separator+user.getUrlPhoto();
+	    			session.setAttribute("urlPhoto", urlPhoto);
+    			}
     			System.out.println("Photo:"+urlPhoto);
     			session.setAttribute("authen", "1");
     			is_succ	=	true;    			

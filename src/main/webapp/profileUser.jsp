@@ -33,8 +33,7 @@
 					<input type="hidden" name="hidEmail" value="<%=session.getAttribute("email") %>"/>
 					<input type="hidden" name="hidCreateDate" value="<%=session.getAttribute("createDate") %>"/>
 					<input type="hidden" name="hidUrlPhoto" value="<%=session.getAttribute("urlPhoto") %>"/>
-					<input type="submit" name="submit" value="Submit"/>
-                    <input type="button" name="cancel" value="Cancel"/>					
+					<input type="submit" name="submit" value="Submit"/>			
 				</td>
 			</tr>
 		</table>
